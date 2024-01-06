@@ -7,18 +7,13 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-  width: 100vw;
-  background: linear-gradient(to top left, #e879f9, #ffffff 50%, #e879f9);
- 
-}
+
 .grid-container{
   height: 100vh;
-  width: 100vw;
   display: grid;
   grid-template-rows:2em 5em 22em 2em 1fr ;
   place-content: center;
+  background: linear-gradient(to top left, #e879f9, #ffffff 50%, #e879f9);
 }
 .main-container {
   /* height: 12em;
@@ -40,8 +35,7 @@ body {
   margin: 1px;
   cursor: pointer;
 }
-.box:hover {
-}
+
 .title {
   text-align: center;
   font-weight: 900;
@@ -87,7 +81,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: Oanimate 1s ease-out;
+  animation: Oanimate .5s ease;
   cursor:none;
 }
 @keyframes Oanimate {
@@ -121,7 +115,7 @@ to{
   top: 50%;
   left: 0;
   transform-origin: center center;
-  animation: Xanimate .5s linear;
+  animation: Xanimate .4s linear;
 }
 
 .x::before {
@@ -151,7 +145,93 @@ button{
 button:hover{
   background-color: #e879f9;
 }
+
 .copyrights>p{
   font-size: .6em;
   margin: 8em 0 0 11em;
 }
+
+@media only screen and (max-width:460px) {
+   .grid-container{
+    height: 39em;
+    width: 30em;
+    grid-template-rows:2em 5em 22em 2em 1fr ;
+  } 
+  .title{
+    line-height: 2em;
+  }
+.main-container {
+height: 16em;
+width: 16em;
+}
+.copyrights{
+position: relative;
+}
+.copyrights p{
+  position: absolute;
+  bottom: 15px;
+}
+}
+@media only screen and (min-height:600px) {
+  .grid-container{
+    height: 40em;
+    grid-template-rows:1em 4em 20em 2em 1fr ;
+  }
+}
+ @media only screen and (min-height:653px) {
+  .grid-container{
+    height: 57em;
+    grid-template-rows:7em 8em 22em 2em 1fr ;
+  } 
+}
+@media only screen and (min-height:667px) {
+  .grid-container{
+    height: 43em;
+    grid-template-rows:2em 7em 22em 2em 1fr ;
+  } 
+ 
+}
+@media only screen and (min-height:720px) {
+  .grid-container{
+    height: 40em;
+    grid-template-rows:2em 4em 20em 1em 1fr ;
+  } 
+   
+}
+@media only screen and (min-height:740px) {
+  .grid-container{
+    height: 44em;
+    grid-template-rows:2em 5em 22em 2em 1fr ;
+  } 
+   
+}
+@media only screen and (min-height:844px) {
+  .grid-container{
+    height: 41em;
+    grid-template-rows:2em 5em 22em 2em 1fr ;
+  } 
+}
+@media only screen and (min-height:895px) {
+  .grid-container{
+    height: 39em;
+    grid-template-rows:2em 5em 22em 2em 1fr ;
+  } 
+}
+@media only screen and (min-height:915px) {
+  .grid-container{
+    height: 39em;
+  } 
+}
+@media only screen and (min-height:930px) {
+  .grid-container{
+    height: 37em;
+  } 
+}
+@media only screen and (min-height:1000px) {
+  .grid-container{
+    grid-template-rows:2em 4em 20em 1em 1fr ;
+   
+  } 
+  
+  
+} 
